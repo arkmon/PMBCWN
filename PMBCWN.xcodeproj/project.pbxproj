@@ -10,9 +10,8 @@
 		58A7EF87558C91857F1073FA /* Pods_PMBCWN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D82AE6B88EB8AB8BB14899 /* Pods_PMBCWN.framework */; };
 		8AE85E983459AE4AB80F04A5 /* Pods_PMBCWNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447883ABAFB972CF42803618 /* Pods_PMBCWNTests.framework */; };
 		F358470F1F0E44010042AD83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358470E1F0E44010042AD83 /* AppDelegate.swift */; };
-		F35847111F0E44010042AD83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35847101F0E44010042AD83 /* ViewController.swift */; };
+		F35847111F0E44010042AD83 /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35847101F0E44010042AD83 /* FeedsViewController.swift */; };
 		F35847141F0E44010042AD83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F35847121F0E44010042AD83 /* Main.storyboard */; };
-		F35847171F0E44010042AD83 /* PMBCWN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F35847151F0E44010042AD83 /* PMBCWN.xcdatamodeld */; };
 		F35847191F0E44010042AD83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F35847181F0E44010042AD83 /* Assets.xcassets */; };
 		F358471C1F0E44010042AD83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F358471A1F0E44010042AD83 /* LaunchScreen.storyboard */; };
 		F35847271F0E44010042AD83 /* PMBCWNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F35847261F0E44010042AD83 /* PMBCWNTests.swift */; };
@@ -20,6 +19,10 @@
 		F36A5C0E1F0E8784006DA762 /* FeedTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5C0D1F0E8784006DA762 /* FeedTableCellViewModel.swift */; };
 		F36A5C111F0E8C8F006DA762 /* RSSFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5C0F1F0E8C8F006DA762 /* RSSFeedTableViewCell.swift */; };
 		F36A5C121F0E8C8F006DA762 /* RSSFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F36A5C101F0E8C8F006DA762 /* RSSFeedTableViewCell.xib */; };
+		F36A5C161F0E936E006DA762 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5C141F0E936E006DA762 /* Coordinator.swift */; };
+		F36A5C171F0E936E006DA762 /* CoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5C151F0E936E006DA762 /* CoordinatorDelegate.swift */; };
+		F36A5C191F0E939D006DA762 /* BaseAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5C181F0E939D006DA762 /* BaseAppCoordinator.swift */; };
+		F36A5C1D1F0E94AD006DA762 /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5C1C1F0E94AD006DA762 /* ListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +57,8 @@
 		CB365255E4C83FCB6F126F83 /* Pods-PMBCWNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMBCWNTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PMBCWNTests/Pods-PMBCWNTests.release.xcconfig"; sourceTree = "<group>"; };
 		F358470B1F0E44010042AD83 /* PMBCWN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PMBCWN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F358470E1F0E44010042AD83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F35847101F0E44010042AD83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F35847101F0E44010042AD83 /* FeedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
 		F35847131F0E44010042AD83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F35847161F0E44010042AD83 /* PMBCWN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PMBCWN.xcdatamodel; sourceTree = "<group>"; };
 		F35847181F0E44010042AD83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F358471B1F0E44010042AD83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F358471D1F0E44010042AD83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,6 +69,10 @@
 		F36A5C0D1F0E8784006DA762 /* FeedTableCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableCellViewModel.swift; sourceTree = "<group>"; };
 		F36A5C0F1F0E8C8F006DA762 /* RSSFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSFeedTableViewCell.swift; sourceTree = "<group>"; };
 		F36A5C101F0E8C8F006DA762 /* RSSFeedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RSSFeedTableViewCell.xib; sourceTree = "<group>"; };
+		F36A5C141F0E936E006DA762 /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		F36A5C151F0E936E006DA762 /* CoordinatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorDelegate.swift; sourceTree = "<group>"; };
+		F36A5C181F0E939D006DA762 /* BaseAppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAppCoordinator.swift; sourceTree = "<group>"; };
+		F36A5C1C1F0E94AD006DA762 /* ListCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,15 +138,18 @@
 		F358470D1F0E44010042AD83 /* PMBCWN */ = {
 			isa = PBXGroup;
 			children = (
+				F36A5C1C1F0E94AD006DA762 /* ListCoordinator.swift */,
+				F36A5C181F0E939D006DA762 /* BaseAppCoordinator.swift */,
+				F36A5C141F0E936E006DA762 /* Coordinator.swift */,
+				F36A5C151F0E936E006DA762 /* CoordinatorDelegate.swift */,
 				F358470E1F0E44010042AD83 /* AppDelegate.swift */,
-				F35847101F0E44010042AD83 /* ViewController.swift */,
+				F35847101F0E44010042AD83 /* FeedsViewController.swift */,
 				F35847311F0E683E0042AD83 /* FeedTableViewModel.swift */,
 				F36A5C131F0E8D39006DA762 /* FeedCell */,
 				F35847121F0E44010042AD83 /* Main.storyboard */,
 				F35847181F0E44010042AD83 /* Assets.xcassets */,
 				F358471A1F0E44010042AD83 /* LaunchScreen.storyboard */,
 				F358471D1F0E44010042AD83 /* Info.plist */,
-				F35847151F0E44010042AD83 /* PMBCWN.xcdatamodeld */,
 			);
 			path = PMBCWN;
 			sourceTree = "<group>";
@@ -368,12 +377,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F35847171F0E44010042AD83 /* PMBCWN.xcdatamodeld in Sources */,
-				F35847111F0E44010042AD83 /* ViewController.swift in Sources */,
+				F35847111F0E44010042AD83 /* FeedsViewController.swift in Sources */,
 				F36A5C111F0E8C8F006DA762 /* RSSFeedTableViewCell.swift in Sources */,
+				F36A5C1D1F0E94AD006DA762 /* ListCoordinator.swift in Sources */,
+				F36A5C171F0E936E006DA762 /* CoordinatorDelegate.swift in Sources */,
 				F36A5C0E1F0E8784006DA762 /* FeedTableCellViewModel.swift in Sources */,
 				F358470F1F0E44010042AD83 /* AppDelegate.swift in Sources */,
+				F36A5C191F0E939D006DA762 /* BaseAppCoordinator.swift in Sources */,
 				F35847321F0E683E0042AD83 /* FeedTableViewModel.swift in Sources */,
+				F36A5C161F0E936E006DA762 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,19 +605,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		F35847151F0E44010042AD83 /* PMBCWN.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F35847161F0E44010042AD83 /* PMBCWN.xcdatamodel */,
-			);
-			currentVersion = F35847161F0E44010042AD83 /* PMBCWN.xcdatamodel */;
-			path = PMBCWN.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = F35847031F0E44010042AD83 /* Project object */;
 }

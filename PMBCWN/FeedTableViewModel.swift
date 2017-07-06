@@ -20,25 +20,42 @@ class FeedTableViewModel {
     var viewModels: [FeedTableCellViewModel] = []
     func startFeed() {
         
+        
         FeedParser(URL: feedURL)?.parseAsync { (result) in
             self.mainFeed = result.rssFeed
-
             self.feeds = (self.mainFeed?.items)!
+            
         }
+        self.makeTheList()
+        
+        
+        
     }
     
     func makeTheList() {
         viewModels .removeAll()
         for feed: RSSFeedItem? in self.feeds {
-            viewModels.append(FeedTableCellViewModel(feedItem: feed!))
+            viewModels.append(FeedTableCellViewModel(feed: feed!))
         }
     }
     
     func numberOfItems() -> Int {
-        return (self.mainFeed?.items?.count)!
+        
+        return self.viewModels.count
     }
     
     func item(at indexPath:IndexPath) -> RSSFeedItem {
         return (self.mainFeed?.items?[indexPath.row])!
+    }
+    
+    func cellViewModel(at indexPath: IndexPath) -> FeedTableCellViewModel {
+        return (viewModels[indexPath.row] as FeedTableCellViewModel)
+    }
+}
+
+extension FeedTableViewModel {
+    
+    func selectedRow(at indexPath: IndexPath) {
+        
     }
 }

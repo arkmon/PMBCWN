@@ -9,11 +9,12 @@
 import UIKit
 import FeedKit
 
-class FeedTableCellViewModel: NSObject {
+class FeedTableCellViewModel {
 
     var feedItem = RSSFeedItem()
     
-    func presetCellWithItem(feed: RSSFeedItem) {
+    init(feed: RSSFeedItem) {
         feedItem = feed
     }
+    
 }
