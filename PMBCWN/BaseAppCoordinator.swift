@@ -12,7 +12,6 @@ class BaseAppCoordinator: Coordinator {
     
     weak var delegate: CoordinatorDelegate?
     var root: UINavigationController?
-    
     var landingCoordinator: ListCoordinator?
     
     required init(with delegate: CoordinatorDelegate?) {

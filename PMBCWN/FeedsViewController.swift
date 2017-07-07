@@ -27,19 +27,29 @@ final class FeedsViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+
+        let attributes = [NSFontAttributeName: UIFont(name: "Avenir", size: 10)!] //change size as per your need here.
+        self.navigationController?.navigationBar.titleTextAttributes = attributes
         viewModel.startFeed()
         DispatchQueue.main.async{
+            self.viewModel.makeTheList()
+            self.title = self.viewModel.feedName()
             self.tableView.reloadData()
         }
         
+        
     }
+    
     func refresh() {
         viewModel.startFeed()
         DispatchQueue.main.async{
+            self.viewModel.makeTheList()
             self.tableView.reloadData()
         }
+        
         refreshControl.endRefreshing()
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

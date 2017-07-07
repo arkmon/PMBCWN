@@ -7,11 +7,12 @@
 //
 
 import UIKit
-
+import FeedKit
 class ListCoordinator: Coordinator {
     
     weak var delegate: CoordinatorDelegate?
     var root: FeedsViewController?
+    var itemCoordinator: ItemCoordinator?
     
     required init(with delegate: CoordinatorDelegate?) {
         self.delegate = delegate
@@ -21,7 +22,7 @@ class ListCoordinator: Coordinator {
         
         if let listViewController = viewController(named: "FeedsViewController", ofType: FeedsViewController.self, in: storyboard(named: "Main")) {
             
-            //listViewController.viewModel.coordinatorDelegate = self
+            listViewController.viewModel.coordinatorDelegate = self
             root = listViewController
             
             delegate?.present(listViewController)
@@ -34,5 +35,13 @@ extension ListCoordinator: CoordinatorDelegate {
     func present(_ viewController: UIViewController) {
         delegate?.present(viewController)
     }
+}
+
+extension ListCoordinator: ListCoordinatorDelegate {
     
+    func didSelect(item: RSSFeedItem) {
+        itemCoordinator = ItemCoordinator(with: self)
+        itemCoordinator?.item = item
+        itemCoordinator?.start()
+    }
 }

@@ -49,7 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         appCoordinator = BaseAppCoordinator(with: self)
         appCoordinator?.start()
     }
-
 }
 
 extension AppDelegate: CoordinatorDelegate {
@@ -57,6 +56,5 @@ extension AppDelegate: CoordinatorDelegate {
     func present(_ viewController: UIViewController) {
         window?.rootViewController = viewController
     }
-    
 }
 

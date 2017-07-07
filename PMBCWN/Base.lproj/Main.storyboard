@@ -42,6 +42,37 @@
             </objects>
             <point key="canvasLocation" x="788" y="100.29985007496252"/>
         </scene>
+        <!--Item View Controller-->
+        <scene sceneID="aPO-YU-ygV">
+            <objects>
+                <viewController storyboardIdentifier="ItemViewController" id="AT7-eO-CYa" customClass="ItemViewController" customModule="PMBCWN" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mr5-JL-m8s"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yd2-oP-zQL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4CD-Sh-31z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubb-gI-u3g">
+                                <rect key="frame" x="16" y="24" width="343" height="619"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="textViewDescription" destination="ubb-gI-u3g" id="jYF-dM-vYC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BSO-ZO-2rm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743.2" y="95.802098950524751"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="v6q-jo-Uin">
             <objects>

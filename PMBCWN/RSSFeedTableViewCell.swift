@@ -13,9 +13,6 @@ class RSSFeedTableViewCell: UITableViewCell {
     @IBOutlet weak var feedTitleLabel: UILabel!
     
     func setupWithCellViewModel(cellViewModel: FeedTableCellViewModel)  {
-        
         self.feedTitleLabel.text = cellViewModel.feedItem.title
-        
     }
-    
 }

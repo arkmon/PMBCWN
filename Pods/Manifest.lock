@@ -1,12 +1,21 @@
 PODS:
   - FeedKit (6.1.1)
+  - Mixpanel-swift (2.1.8)
+  - ReactiveSwift (1.1.3):
+    - Result (~> 3.2)
+  - Result (3.2.3)
 
 DEPENDENCIES:
   - FeedKit (~> 6.0)
+  - Mixpanel-swift
+  - ReactiveSwift (~> 1.1)
 
 SPEC CHECKSUMS:
   FeedKit: b8037e48c6317c8a3c480285c55b5f7bf2b74f5e
+  Mixpanel-swift: '05695617653760d15d5aee1414f1ae7c336de1a2'
+  ReactiveSwift: f54ba12c2e799003432930fa55495315ae44f32b
+  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
 
-PODFILE CHECKSUM: 39319f219274e78255fdf4335fddb77b57b48ad4
+PODFILE CHECKSUM: b9195d3b1bc8082f7912d77dd1867492db05b858
 
 COCOAPODS: 1.2.1

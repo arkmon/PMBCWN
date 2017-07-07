@@ -14,22 +14,24 @@ let feedURL = URL(string: "http://parafianottingham.org.uk/feed/rss/blog/blog.fe
 class FeedTableViewModel {
     
     var feeds: [RSSFeedItem?] = []
-    
     var mainFeed: RSSFeed?
-    
+    weak var coordinatorDelegate: ListCoordinatorDelegate?
     var viewModels: [FeedTableCellViewModel] = []
+    
     func startFeed() {
         
-        
         FeedParser(URL: feedURL)?.parseAsync { (result) in
-            self.mainFeed = result.rssFeed
-            self.feeds = (self.mainFeed?.items)!
-            
+            guard let feed = result.rssFeed, result.isSuccess else {
+                print(result.error)
+                return
+            }
+            if (result.isSuccess) {
+                self.mainFeed = feed
+                self.feeds = (self.mainFeed?.items)!
+            } else {
+                
+            }
         }
-        self.makeTheList()
-        
-        
-        
     }
     
     func makeTheList() {
@@ -37,6 +39,11 @@ class FeedTableViewModel {
         for feed: RSSFeedItem? in self.feeds {
             viewModels.append(FeedTableCellViewModel(feed: feed!))
         }
+    }
+    
+    func feedName() -> String {
+        
+        return self.mainFeed?.title ?? "Parafia w Nottingham"
     }
     
     func numberOfItems() -> Int {
@@ -56,6 +63,7 @@ class FeedTableViewModel {
 extension FeedTableViewModel {
     
     func selectedRow(at indexPath: IndexPath) {
-        
+        let item = self.item(at: indexPath)
+        coordinatorDelegate?.didSelect(item: item)
     }
 }

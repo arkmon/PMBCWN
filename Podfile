@@ -5,7 +5,8 @@ target 'PMBCWN' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'FeedKit', '~> 6.0'
-
+  pod 'Mixpanel-swift'
+  pod 'ReactiveSwift', '~> 1.1'
   # Pods for PMBCWN
 
   target 'PMBCWNTests' do
