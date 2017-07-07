@@ -27,6 +27,8 @@
 		F36A5C211F0F8134006DA762 /* ItemCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5C201F0F8134006DA762 /* ItemCoordinator.swift */; };
 		F36A5C241F0F82D2006DA762 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5C221F0F82D2006DA762 /* ItemViewController.swift */; };
 		F36A5C271F0F9B47006DA762 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5C261F0F9B47006DA762 /* ItemViewModel.swift */; };
+		F36A5C2C1F0FDCAA006DA762 /* MixPanelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5C2B1F0FDCAA006DA762 /* MixPanelConfiguration.swift */; };
+		F36A5C2E1F0FE0FA006DA762 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F36A5C2D1F0FE0FA006DA762 /* UserNotifications.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		F36A5C201F0F8134006DA762 /* ItemCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCoordinator.swift; sourceTree = "<group>"; };
 		F36A5C221F0F82D2006DA762 /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		F36A5C261F0F9B47006DA762 /* ItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		F36A5C2B1F0FDCAA006DA762 /* MixPanelConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixPanelConfiguration.swift; sourceTree = "<group>"; };
+		F36A5C2D1F0FE0FA006DA762 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F36A5C2E1F0FE0FA006DA762 /* UserNotifications.framework in Frameworks */,
 				58A7EF87558C91857F1073FA /* Pods_PMBCWN.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +111,7 @@
 		DB39C9999B6C954AA1677AE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F36A5C2D1F0FE0FA006DA762 /* UserNotifications.framework */,
 				25D82AE6B88EB8AB8BB14899 /* Pods_PMBCWN.framework */,
 				447883ABAFB972CF42803618 /* Pods_PMBCWNTests.framework */,
 			);
@@ -146,6 +152,7 @@
 		F358470D1F0E44010042AD83 /* PMBCWN */ = {
 			isa = PBXGroup;
 			children = (
+				F36A5C2B1F0FDCAA006DA762 /* MixPanelConfiguration.swift */,
 				F36A5C2A1F0FA98B006DA762 /* List */,
 				F36A5C291F0FA96F006DA762 /* Coordinator */,
 				F36A5C281F0FA95F006DA762 /* Item */,
@@ -423,6 +430,7 @@
 				F36A5C171F0E936E006DA762 /* CoordinatorDelegate.swift in Sources */,
 				F36A5C0E1F0E8784006DA762 /* FeedTableCellViewModel.swift in Sources */,
 				F358470F1F0E44010042AD83 /* AppDelegate.swift in Sources */,
+				F36A5C2C1F0FDCAA006DA762 /* MixPanelConfiguration.swift in Sources */,
 				F36A5C191F0E939D006DA762 /* BaseAppCoordinator.swift in Sources */,
 				F35847321F0E683E0042AD83 /* FeedTableViewModel.swift in Sources */,
 				F36A5C161F0E936E006DA762 /* Coordinator.swift in Sources */,
