@@ -39,5 +39,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>MixPanelToken</key>
+	<string>fe4d2c25897760bbdec9cd6dbed651cd</string>
 </dict>
 </plist>

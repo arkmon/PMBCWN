@@ -9,6 +9,7 @@
 
 import Foundation
 import Mixpanel
+import UserNotifications
 
 private let kVerticalKey_creditCard: String = "Credit Cards"
 private let kVerticalKey_loan: String = "Loans"
@@ -33,19 +34,27 @@ class MixPanelConfiguration: NSObject {
     
     class func setupMixPanel() {
         Mixpanel.initialize(token: "MIXPANEL_TOKEN")
+        let mixpanel = Mixpanel.mainInstance()
+        // This makes the current ID (by default an auto-generated GUID)
+        // and '13793' interchangeable distinct ids (but not retroactively).
+        mixpanel.createAlias("iPhone",
+                             distinctId: mixpanel.distinctId);
+        // To create a user profile, you must call identify
+        mixpanel.identify(distinctId: mixpanel.distinctId)
     }
     
     // push notifications
     // to register push notifications MUST to set arePushNotificationsEnabled to YES on OwnerConfiguration
     class func registerPushNotifications() {
-        //use user defoults to se if user already have push notifications enabled
-        return
+        // iOS 10 support
+        if #available(iOS 10, *) {
+            UNUserNotificationCenter.current().requestAuthorization(options:[.badge, .alert, .sound]){ (granted, error) in }
+            UIApplication.shared.registerForRemoteNotifications()
+        } else {
+            // iOS 7 support
+            UIApplication.shared.registerForRemoteNotifications(matching: [.badge, .sound, .alert])
+        }
     }
-    
-    
-    //UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: ([.sound, .alert, .badge]), categories: nil))
-    
-    
 }
 
 func addPushDeviceToken(_ deviceToken: Data) {
@@ -56,16 +65,16 @@ func removeAllPushDeviceTokens(_ deviceToken: Data) {
     Mixpanel.mainInstance().people.removePushDeviceToken(deviceToken)
 }
 
-func deepLinkString(from url: URL) -> String {
-    var deepLinkString: String = ""
-    if url == nil {
-        print("WARNING: url is nil")
-        return deepLinkString
-    }
-//    let absoluteString: String = url.absoluteString
-//    if absoluteString.contains(_) {
-//        deepLinkString = absoluteString
+//func deepLinkString(from url: URL) -> String {
+//    var deepLinkString: String = ""
+//    if url == nil {
+//        print("WARNING: url is nil")
+//        return deepLinkString
 //    }
-//    return deepLinkString
-}
+////    let absoluteString: String = url.absoluteString
+////    if absoluteString.contains(_) {
+////        deepLinkString = absoluteString
+////    }
+////    return deepLinkString
+//}}
 
