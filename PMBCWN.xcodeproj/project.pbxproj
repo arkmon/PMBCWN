@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55C9AFE51F114849009242E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C9AFE41F114849009242E4 /* Assets.xcassets */; };
+		55A3F8831F1404830021BD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55A3F8821F1404830021BD3C /* Assets.xcassets */; };
 		58A7EF87558C91857F1073FA /* Pods_PMBCWN.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D82AE6B88EB8AB8BB14899 /* Pods_PMBCWN.framework */; };
 		8AE85E983459AE4AB80F04A5 /* Pods_PMBCWNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447883ABAFB972CF42803618 /* Pods_PMBCWNTests.framework */; };
 		F358470F1F0E44010042AD83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F358470E1F0E44010042AD83 /* AppDelegate.swift */; };
@@ -60,8 +60,8 @@
 		2A255FC60C1465209196B5FB /* Pods-PMBCWNTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMBCWNTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PMBCWNTests/Pods-PMBCWNTests.debug.xcconfig"; sourceTree = "<group>"; };
 		344B89825E75E4D14785E2E9 /* Pods-PMBCWN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMBCWN.release.xcconfig"; path = "Pods/Target Support Files/Pods-PMBCWN/Pods-PMBCWN.release.xcconfig"; sourceTree = "<group>"; };
 		447883ABAFB972CF42803618 /* Pods_PMBCWNTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PMBCWNTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55A3F8821F1404830021BD3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		55C9AFE31F112819009242E4 /* PMBCWN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PMBCWN.entitlements; sourceTree = "<group>"; };
-		55C9AFE41F114849009242E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../Documents/iOS/Assets.xcassets; sourceTree = "<group>"; };
 		CB365255E4C83FCB6F126F83 /* Pods-PMBCWNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMBCWNTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PMBCWNTests/Pods-PMBCWNTests.release.xcconfig"; sourceTree = "<group>"; };
 		F358470B1F0E44010042AD83 /* PMBCWN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PMBCWN.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F358470E1F0E44010042AD83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,9 +161,9 @@
 				F358470E1F0E44010042AD83 /* AppDelegate.swift */,
 				F36A5C131F0E8D39006DA762 /* FeedCell */,
 				F35847121F0E44010042AD83 /* Main.storyboard */,
-				55C9AFE41F114849009242E4 /* Assets.xcassets */,
 				F358471A1F0E44010042AD83 /* LaunchScreen.storyboard */,
 				F358471D1F0E44010042AD83 /* Info.plist */,
+				55A3F8821F1404830021BD3C /* Assets.xcassets */,
 			);
 			path = PMBCWN;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 			files = (
 				F36A5C121F0E8C8F006DA762 /* RSSFeedTableViewCell.xib in Resources */,
 				F358471C1F0E44010042AD83 /* LaunchScreen.storyboard in Resources */,
-				55C9AFE51F114849009242E4 /* Assets.xcassets in Resources */,
+				55A3F8831F1404830021BD3C /* Assets.xcassets in Resources */,
 				F35847141F0E44010042AD83 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
