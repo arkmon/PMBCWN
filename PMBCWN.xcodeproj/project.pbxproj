@@ -29,6 +29,7 @@
 		F36A5C271F0F9B47006DA762 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5C261F0F9B47006DA762 /* ItemViewModel.swift */; };
 		F36A5C2C1F0FDCAA006DA762 /* MixPanelConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A5C2B1F0FDCAA006DA762 /* MixPanelConfiguration.swift */; };
 		F36A5C2E1F0FE0FA006DA762 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F36A5C2D1F0FE0FA006DA762 /* UserNotifications.framework */; };
+		F3962CAF1F14C817000D727E /* SideMenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3962CAE1F14C817000D727E /* SideMenuTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		F36A5C261F0F9B47006DA762 /* ItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		F36A5C2B1F0FDCAA006DA762 /* MixPanelConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixPanelConfiguration.swift; sourceTree = "<group>"; };
 		F36A5C2D1F0FE0FA006DA762 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		F3962CAE1F14C817000D727E /* SideMenuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,17 +155,18 @@
 		F358470D1F0E44010042AD83 /* PMBCWN */ = {
 			isa = PBXGroup;
 			children = (
-				55C9AFE31F112819009242E4 /* PMBCWN.entitlements */,
-				F36A5C2B1F0FDCAA006DA762 /* MixPanelConfiguration.swift */,
+				F3962CB01F14C97F000D727E /* MixPanel */,
+				F3962CB11F14C98D000D727E /* SideMenu */,
 				F36A5C2A1F0FA98B006DA762 /* List */,
 				F36A5C291F0FA96F006DA762 /* Coordinator */,
 				F36A5C281F0FA95F006DA762 /* Item */,
-				F358470E1F0E44010042AD83 /* AppDelegate.swift */,
 				F36A5C131F0E8D39006DA762 /* FeedCell */,
+				F358470E1F0E44010042AD83 /* AppDelegate.swift */,
 				F35847121F0E44010042AD83 /* Main.storyboard */,
 				F358471A1F0E44010042AD83 /* LaunchScreen.storyboard */,
 				F358471D1F0E44010042AD83 /* Info.plist */,
 				55A3F8821F1404830021BD3C /* Assets.xcassets */,
+				55C9AFE31F112819009242E4 /* PMBCWN.entitlements */,
 			);
 			path = PMBCWN;
 			sourceTree = "<group>";
@@ -216,6 +219,22 @@
 				F35847311F0E683E0042AD83 /* FeedTableViewModel.swift */,
 			);
 			name = List;
+			sourceTree = "<group>";
+		};
+		F3962CB01F14C97F000D727E /* MixPanel */ = {
+			isa = PBXGroup;
+			children = (
+				F36A5C2B1F0FDCAA006DA762 /* MixPanelConfiguration.swift */,
+			);
+			name = MixPanel;
+			sourceTree = "<group>";
+		};
+		F3962CB11F14C98D000D727E /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F3962CAE1F14C817000D727E /* SideMenuTableView.swift */,
+			);
+			name = SideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,6 +452,7 @@
 				F36A5C1F1F0F8008006DA762 /* ListCoordinatorDelegate.swift in Sources */,
 				F36A5C211F0F8134006DA762 /* ItemCoordinator.swift in Sources */,
 				F36A5C111F0E8C8F006DA762 /* RSSFeedTableViewCell.swift in Sources */,
+				F3962CAF1F14C817000D727E /* SideMenuTableView.swift in Sources */,
 				F36A5C1D1F0E94AD006DA762 /* ListCoordinator.swift in Sources */,
 				F36A5C241F0F82D2006DA762 /* ItemViewController.swift in Sources */,
 				F36A5C171F0E936E006DA762 /* CoordinatorDelegate.swift in Sources */,

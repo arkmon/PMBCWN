@@ -7,6 +7,7 @@ target 'PMBCWN' do
   pod 'FeedKit', '~> 6.0'
   pod 'Mixpanel-swift'
   pod 'ReactiveSwift', '~> 1.1'
+  pod 'SideMenu'
   # Pods for PMBCWN
 
   target 'PMBCWNTests' do
