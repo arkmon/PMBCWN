@@ -60,11 +60,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PMBCWN/ListCoordinator.swift"
-            timestampString = "521127228.18767"
+            timestampString = "521729876.822848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
             landmarkName = "start()"
             landmarkType = "7">
          </BreakpointContent>

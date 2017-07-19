@@ -89,14 +89,20 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Contentful/Contentful.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Decodable/Decodable.framework"
   install_framework "$BUILT_PRODUCTS_DIR/FeedKit/FeedKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Interstellar/Interstellar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Mixpanel-swift/Mixpanel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ReactiveSwift/ReactiveSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Result/Result.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SideMenu/SideMenu.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/Contentful/Contentful.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Decodable/Decodable.framework"
   install_framework "$BUILT_PRODUCTS_DIR/FeedKit/FeedKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Interstellar/Interstellar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Mixpanel-swift/Mixpanel.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ReactiveSwift/ReactiveSwift.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Result/Result.framework"

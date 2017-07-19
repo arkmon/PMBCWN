@@ -2,7 +2,7 @@
 //  ItemViewController.swift
 //  PMBCWN
 //
-//  Created by Arkadiusz Dowejko on 07/07/2017.
+//  Created by Arkadiusz Dowejko on 14/07/2017.
 //  Copyright © 2017 arkmon. All rights reserved.
 //
 
@@ -15,7 +15,7 @@ class ItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        textViewDescription.attributedText = viewModel.itemDescription
+        textViewDescription.text = viewModel.itemDescription
         self.title = self.viewModel.itemTitle
     }
 }

@@ -43,7 +43,7 @@ class FeedTableViewModel {
     
     func feedName() -> String {
         
-        return self.mainFeed?.title ?? "Parafia w Nottingham"
+        return "Parafia w Nottingham"
     }
     
     func numberOfItems() -> Int {

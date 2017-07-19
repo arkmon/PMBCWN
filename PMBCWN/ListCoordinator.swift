@@ -8,11 +8,12 @@
 
 import UIKit
 import FeedKit
+
 class ListCoordinator: Coordinator {
     
     weak var delegate: CoordinatorDelegate?
     var root: FeedsViewController?
-    var itemCoordinator: ItemCoordinator?
+    var itemCoordinator: TemporaryItemCoordinator?
     
     required init(with delegate: CoordinatorDelegate?) {
         self.delegate = delegate
@@ -40,7 +41,7 @@ extension ListCoordinator: CoordinatorDelegate {
 extension ListCoordinator: ListCoordinatorDelegate {
     
     func didSelect(item: RSSFeedItem) {
-        itemCoordinator = ItemCoordinator(with: self)
+        itemCoordinator = TemporaryItemCoordinator(with: self)
         itemCoordinator?.item = item
         itemCoordinator?.start()
     }

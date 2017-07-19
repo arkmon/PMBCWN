@@ -11,25 +11,26 @@ import SideMenu
 
 class SideMenuTableView: UITableViewController {
     
+    let viewModel = SideMenuTableViewModel()
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        let nib = UINib(nibName: "EntryTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "EntryTableViewCell")
+        viewModel.startFeed()
         
-        print("SideMenu Appearing!")
+       
         
-        // this will be non-nil if a blur effect is applied
-        guard tableView.backgroundView == nil else {
-            return
+        DispatchQueue.main.async{
+            
+            
+            self.tableView.reloadData()
         }
-        
-        // Set up a cool background image for demo purposes
-        let imageView = UIImageView(image: UIImage(named: "saturn"))
-        imageView.contentMode = .scaleAspectFit
-        imageView.backgroundColor = UIColor.black.withAlphaComponent(0.2)
-        tableView.backgroundView = imageView
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         
         print("SideMenu Appeared!")
     }
@@ -44,6 +45,29 @@ class SideMenuTableView: UITableViewController {
         super.viewDidDisappear(animated)
         
         print("SideMenu Disappeared!")
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return viewModel.numberOfItems()
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 38
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EntryTableViewCell", for: indexPath) as! EntryTableViewCell
+        let expenseCellModel = viewModel.cellViewModel(at: indexPath)
+        
+        cell.setupWithCellViewModel(cellViewModel: expenseCellModel)
+        
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.selectedRow(at: indexPath)
     }
     
 }

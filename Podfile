@@ -8,6 +8,7 @@ target 'PMBCWN' do
   pod 'Mixpanel-swift'
   pod 'ReactiveSwift', '~> 1.1'
   pod 'SideMenu'
+  pod 'Contentful', '~> 0.3.0'
   # Pods for PMBCWN
 
   target 'PMBCWNTests' do
