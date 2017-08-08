@@ -22,7 +22,10 @@ class FeedTableViewModel {
         
         FeedParser(URL: feedURL)?.parseAsync { (result) in
             guard let feed = result.rssFeed, result.isSuccess else {
-                print(result.error)
+                if let error = result.error{
+                    print(error)
+                }
+                
                 return
             }
             if (result.isSuccess) {

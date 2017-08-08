@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SideMenu
 
 final class FeedsViewController: UIViewController {
     
@@ -17,14 +16,6 @@ final class FeedsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? UISideMenuNavigationController
-        menuLeftNavigationController?.leftSide = true
-        SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
-        SideMenuManager.menuPresentMode = .viewSlideInOut
-        
-        SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
-        SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
         
         let nib = UINib(nibName: "RSSFeedTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "RSSFeedTableViewCell")
@@ -43,10 +34,6 @@ final class FeedsViewController: UIViewController {
             self.title = self.viewModel.feedName()
             self.tableView.reloadData()
         }
-    }
-    
-    @IBAction func test(_ sender: Any) {
-        present(SideMenuManager.menuLeftNavigationController!, animated: true, completion: nil)
     }
     
     func refresh() {

@@ -1,9 +1,6 @@
-//  Converted with Swiftify v1.0.6395 - https://objectivec2swift.com/
-//
 //  MixPanelConfiguration.swift
 //  CreditMatcher
 //
-//  Created by Tomas Urbonas on 08/02/2017.
 //  Copyright © 2017 Experian. All rights reserved.
 //
 
@@ -11,11 +8,7 @@ import Foundation
 import Mixpanel
 import UserNotifications
 
-
 class MixPanelConfiguration: NSObject, UNUserNotificationCenterDelegate {
-    // setup
-    
-    // MARK: - setup
     
     class func setupMixPanel() {
         
@@ -31,7 +24,6 @@ class MixPanelConfiguration: NSObject, UNUserNotificationCenterDelegate {
     }
     
     class func didRegisterNotifications(_ deviceToken: Data) {
-        
         let mixpanel = Mixpanel.mainInstance()
         mixpanel.people .addPushDeviceToken(deviceToken)
     }

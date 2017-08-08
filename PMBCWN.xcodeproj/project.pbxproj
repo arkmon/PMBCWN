@@ -39,6 +39,10 @@
 		F38FC36C1F18B5D200AFA3A3 /* EntryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F38FC36A1F18B5D200AFA3A3 /* EntryTableViewCell.xib */; };
 		F3962CAF1F14C817000D727E /* SideMenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3962CAE1F14C817000D727E /* SideMenuTableView.swift */; };
 		F3A2529D1F16BED3008F2398 /* SideMenuTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A2529C1F16BED3008F2398 /* SideMenuTableViewModel.swift */; };
+		F3E6537C1F38AB3B0045CA39 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E6537A1F38AB3B0045CA39 /* MainViewController.swift */; };
+		F3E6537F1F38AE7E0045CA39 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E6537E1F38AE7E0045CA39 /* MainCoordinator.swift */; };
+		F3E653811F38B4030045CA39 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E653801F38B4030045CA39 /* MainViewModel.swift */; };
+		F3E653831F39A83C0045CA39 /* MainCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E653821F39A83C0045CA39 /* MainCoordinatorDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +110,10 @@
 		F38FC36A1F18B5D200AFA3A3 /* EntryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EntryTableViewCell.xib; sourceTree = "<group>"; };
 		F3962CAE1F14C817000D727E /* SideMenuTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableView.swift; sourceTree = "<group>"; };
 		F3A2529C1F16BED3008F2398 /* SideMenuTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewModel.swift; sourceTree = "<group>"; };
+		F3E6537A1F38AB3B0045CA39 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F3E6537E1F38AE7E0045CA39 /* MainCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		F3E653801F38B4030045CA39 /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		F3E653821F39A83C0045CA39 /* MainCoordinatorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCoordinatorDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +181,10 @@
 		F358470D1F0E44010042AD83 /* PMBCWN */ = {
 			isa = PBXGroup;
 			children = (
+				F3E6537A1F38AB3B0045CA39 /* MainViewController.swift */,
+				F3E6537E1F38AE7E0045CA39 /* MainCoordinator.swift */,
+				F3E653801F38B4030045CA39 /* MainViewModel.swift */,
+				F3E653821F39A83C0045CA39 /* MainCoordinatorDelegate.swift */,
 				F3962CB01F14C97F000D727E /* MixPanel */,
 				F3962CB11F14C98D000D727E /* SideMenu */,
 				F36A5C2A1F0FA98B006DA762 /* List */,
@@ -480,6 +492,7 @@
 				F30271AF1F18F46A007BF1FC /* ItemCoordinator.swift in Sources */,
 				F30271B31F18F587007BF1FC /* ItemViewController.swift in Sources */,
 				F30271B11F18F4CA007BF1FC /* ItemViewModel.swift in Sources */,
+				F3E653811F38B4030045CA39 /* MainViewModel.swift in Sources */,
 				F35847111F0E44010042AD83 /* FeedsViewController.swift in Sources */,
 				F36A5C1F1F0F8008006DA762 /* ListCoordinatorDelegate.swift in Sources */,
 				F36A5C211F0F8134006DA762 /* TemporaryItemCoordinator.swift in Sources */,
@@ -488,8 +501,11 @@
 				F38FC36B1F18B5D200AFA3A3 /* EntryTableViewCell.swift in Sources */,
 				F3962CAF1F14C817000D727E /* SideMenuTableView.swift in Sources */,
 				F38FC3661F18AAD800AFA3A3 /* EntryTableCellViewModel.swift in Sources */,
+				F3E6537F1F38AE7E0045CA39 /* MainCoordinator.swift in Sources */,
 				F36A5C1D1F0E94AD006DA762 /* ListCoordinator.swift in Sources */,
+				F3E653831F39A83C0045CA39 /* MainCoordinatorDelegate.swift in Sources */,
 				F36A5C241F0F82D2006DA762 /* TemporaryItemViewController.swift in Sources */,
+				F3E6537C1F38AB3B0045CA39 /* MainViewController.swift in Sources */,
 				F36A5C171F0E936E006DA762 /* CoordinatorDelegate.swift in Sources */,
 				F36A5C0E1F0E8784006DA762 /* FeedTableCellViewModel.swift in Sources */,
 				F358470F1F0E44010042AD83 /* AppDelegate.swift in Sources */,

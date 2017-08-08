@@ -12,7 +12,7 @@ class BaseAppCoordinator: Coordinator {
     
     weak var delegate: CoordinatorDelegate?
     var root: UINavigationController?
-    var landingCoordinator: ListCoordinator?
+    var mainCoordinator: MainCoordinator?
     
     required init(with delegate: CoordinatorDelegate?) {
         self.delegate = delegate
@@ -27,8 +27,8 @@ class BaseAppCoordinator: Coordinator {
     }
     
     func showLanding() {
-        landingCoordinator = ListCoordinator(with: self)
-        landingCoordinator?.start()
+        mainCoordinator = MainCoordinator(with: self)
+        mainCoordinator?.start()
     }
     
 }

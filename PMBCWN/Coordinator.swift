@@ -1,6 +1,6 @@
 //
 //  Coordinator.swift
-//  money
+//
 //
 //  Created by Arkadiusz Dowejko on 23/03/2017.
 //  Copyright © 2017 Arek Dowejko. All rights reserved.

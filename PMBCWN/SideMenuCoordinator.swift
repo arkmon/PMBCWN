@@ -12,7 +12,7 @@ import SideMenu
 class SideMenuCoordinator: Coordinator {
     public var root: UIViewController?
 
-    //typealias ControllerType = UIViewController
+    
     weak var delegate: CoordinatorDelegate?
     var itemCoordinator: ItemCoordinator?
     

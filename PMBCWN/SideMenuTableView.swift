@@ -15,15 +15,12 @@ class SideMenuTableView: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         let nib = UINib(nibName: "EntryTableViewCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "EntryTableViewCell")
         viewModel.startFeed()
         
-       
-        
         DispatchQueue.main.async{
-            
-            
             self.tableView.reloadData()
         }
     }

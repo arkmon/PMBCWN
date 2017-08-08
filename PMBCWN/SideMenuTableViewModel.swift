@@ -12,9 +12,12 @@ import Interstellar
 
 class SideMenuTableViewModel {
     
-    static let SPACE_ID = "pzytr6e954mh"
-    static let ACCESS_TOKEN = "d463a73b03fe68af6f23455b7a1dc3c9b695038808127212152c696f0dd5d61e"
-    let client: Client = Client(spaceIdentifier: SPACE_ID, accessToken: ACCESS_TOKEN)
+    enum API {
+        static let SPACE_ID = "pzytr6e954mh"
+        static let ACCESS_TOKEN = "d463a73b03fe68af6f23455b7a1dc3c9b695038808127212152c696f0dd5d61e"
+    }
+    
+    let client: Client = Client(spaceIdentifier: API.SPACE_ID, accessToken: API.ACCESS_TOKEN)
     var entriesArray: [Entry] = []
     var viewModels: [EntryTableCellViewModel] = []
     weak var coordinatorDelegate: SideMenuCoordinatorDelegate?
